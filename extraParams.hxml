@@ -1,0 +1,1 @@
+--macro addGlobalMetadata("jvm.Jvm", "@:build(haxe.issue12985.Patch.patch())", false)

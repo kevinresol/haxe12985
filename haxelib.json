@@ -1,0 +1,8 @@
+{
+	"name": "haxe12985",
+	"version": "1.0.0",
+	"description": "A patch for the issue 12985, until it is fixed in the haxe compiler",
+	"license": "MIT",
+	"contributors": ["kevinresol"],
+	"dependencies": {}
+}
