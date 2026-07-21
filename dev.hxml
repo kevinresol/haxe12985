@@ -1,3 +1,5 @@
-tests.hxml
+-main Test
+-cp tests
+-dce full
 -lib haxe12985
 --jvm bin/Dev.jar
