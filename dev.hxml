@@ -1,2 +1,3 @@
 tests.hxml
+-lib haxe12985
 --jvm bin/Dev.jar

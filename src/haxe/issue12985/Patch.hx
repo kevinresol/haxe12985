@@ -6,7 +6,15 @@ class Patch {
 		tink.SyntaxHub.transformMain.whenever(expr -> {
 			if (haxe.macro.Context.defined("java")) {
 				macro {
-					static final __haxe12985_mainThread = sys.thread.Thread.current();
+					static var __haxe12985:Dynamic;
+					inline function foo(v:Dynamic)
+						__haxe12985 = v;
+
+					#if haxe5
+					foo(sys.thread.Thread.current());
+					#else
+					foo(@:privateAccess haxe.EntryPoint.mainThread);
+					#end
 					$expr;
 				};
 			} else {
