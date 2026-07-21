@@ -15,8 +15,6 @@ jobs:
         haxe-version:
           - stable
           - nightly
-        target:
-          - jvm
 
     steps:
       - name: Check out repo
@@ -38,4 +36,4 @@ jobs:
         run: lix download
 
       - name: Run Test
-        run: lix run travix ${{ matrix.target }}
+        run: haxe dev.hxml && java -jar bin/Dev.jar
