@@ -7,13 +7,13 @@ class Patch {
 			if (haxe.macro.Context.defined("java")) {
 				macro {
 					static var __haxe12985:Dynamic;
-					inline function foo(v:Dynamic)
+					inline function capture(v:Dynamic)
 						__haxe12985 = v;
 
 					#if haxe5
-					foo(sys.thread.Thread.current());
+					capture(haxe.EventLoop.main);
 					#else
-					foo(@:privateAccess haxe.EntryPoint.mainThread);
+					capture(@:privateAccess haxe.EntryPoint.mainThread);
 					#end
 					$expr;
 				};
