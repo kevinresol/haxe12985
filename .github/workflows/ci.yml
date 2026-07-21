@@ -16,7 +16,7 @@ jobs:
           - stable
           - nightly
         target:
-          - interp
+          - jvm
 
     steps:
       - name: Check out repo
